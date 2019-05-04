@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+body{background-color:#007dad; }
+.container{
+
+	width:80%;
+	height:250px;
+	margin-top:-10%;  
+}	
+.d1{width:60%;
+
+	height: auto;
+	background-color:white;
+	border-radius:10px;  
+	margin-top:7%; }
+p{color:white;font-size:35px;font-family: sans-serif;color:black;line-height:230px;     }
+input[type="text"]{
+	width:80%;
+	height:40px;  
+	margin-top:19px; 
+	border-radius:2px;
+	outline: none;
+	border:none; 
+		color:#007dad;
+		border:1px solid lightgrey; 
+margin-left:-4px; 
+
+}
+input[type="text"]:focus{border:1px solid #007dad;}
+input[type="button"]{
+	width:91%;
+	height:43px;  
+	margin-top:19px; 
+	background-color:#007dad;
+	border:none; 
+	border-radius:5px; 
+color: white;
+
+}
+
+.icon {
+  padding: 14px 10px 14px 10px;
+  background: #007dad;
+  color: white;
+  min-width: 35px;
+  text-align: center;
+
+  position: relative;
+  top:2px; 
+}
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+</style>	
+</head>
+<body>
+
+<center>
+<div class="d1">	
+	<p>User Login</p>	
+	<div class="container">
+		<form>	
+			<div class=".input-container">
+			<i class="fa fa-user icon"></i>
+			<input type="text" name="text" placeholder="&nbsp;&nbsp;Enter Username" id="username"><br>
+			</div>
+			<div class=".input-container">
+
+			    <i class="fa fa-key icon"></i>
+			<input type="text" name="pass" placeholder="&nbsp;&nbsp;Enter Password" id="password"><br>
+			<input type="button" name="login" id="login" value="Login" onclick="validate()"><br>
+
+			<p id="demo"></p>
+			</div>
+
+
+		</form>
+
+
+
+
+
+	</div>
+</div>
+</center>
+
+<script type="text/javascript">
+
+
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == "admin" && password == "admin123"){
+alert ("Login successfully");
+location.href="success.html";
+
+}
+else{
+alert('incorrect email or password');
+}
+}
+</script>
+</body>
+</html>
